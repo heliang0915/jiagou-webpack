@@ -1,0 +1,27 @@
+//定义全局变量
+$color:green;
+$fontSize:19px;
+//定义公用样式
+@mixin myBoxA($color:$color,$fontSize:$fontSize){
+  color: $color;
+  font-size: $fontSize;
+}
+@mixin myBoxBtn($color,$fontSize){
+  color: $color;
+  font-size: $fontSize;
+}
+
+.box{
+   a{
+    // 引入公用样式 不需要参数
+    @include myBoxA;
+   }
+   button{
+     //需要参数
+     @include myBoxBtn(blue,12px);
+   }
+  h4{
+    font-style: normal;
+    font-weight: 100;
+  }
+}

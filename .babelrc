@@ -1,0 +1,8 @@
+{
+  "presets": ["@babel/preset-env"],
+  "plugins": [
+    ["@babel/plugin-proposal-decorators", { "legacy": true }], //配置装饰器 转换为ES5
+    ["@babel/plugin-proposal-class-properties", { "loose" : true }], //配置class 转化为Es5
+    "@babel/plugin-transform-runtime" //将高级es7等语法转换为es5
+    ]
+}
